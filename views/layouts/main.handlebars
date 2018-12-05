@@ -1,15 +1,101 @@
 <!DOCTYPE html>
-<html>
+<html class="no-js" lang="en">
 
 <head>
-  <meta charset="utf-8">
-  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0-beta.3/css/bootstrap.min.css">
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Foundation | Welcome</title>
+  <link rel="stylesheet" href="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.min.css">
   <link rel="stylesheet" href="/styles/styles.css" media="screen" title="no title" charset="utf-8">
-  <title>Home Page</title>
 </head>
 
 <body>
-  {{{body}}}
+  <div class="off-canvas-wrapper">
+    <div class="off-canvas-wrapper-inner" data-off-canvas-wrapper>
+      <div class="off-canvas position-left reveal-for-large" id="my-info" data-off-canvas data-position="left">
+        <div class="row column">
+          <br>
+          <img class="thumbnail" src="https://placehold.it/550x350">
+          <hr>
+          <div class="columns" data-sticky-container>
+            <div class="sticky" data-sticky data-anchor="content">
+
+              <h4>Prepare</h4>
+              <ul>
+                <li><a href="#">Procedure</a></li>
+              </ul>
+              <h4>Create</h4>
+              <ul>
+                <li><a href="#">Procedure</a></li>
+                <li><a href="#">Surgeons</a></li>
+                <li><a href="#">Item</a></li>
+              </ul>
+              <h4>List of</h4>
+              <ul>
+                <li><a href="#">Procedures</a></li>
+                <li><a href="#">Doctors</a></li>
+                <li><a href="#">Items</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="off-canvas-content" data-off-canvas-content>
+        <div class="title-bar hide-for-large">
+          <div class="title-bar-left">
+            <button class="menu-icon" type="button" data-open="my-info"></button>
+            <span class="title-bar-title">Mike Mikerson</span>
+          </div>
+        </div>
+        <div class="callout primary">
+          <div class="row column">
+            <h1>Surgeon's Warehouse</h1>
+            <p class="lead">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vivamus luctus urna sed urna
+              ultricies ac tempor dui sagittis. In condimentum facilisis porta. Sed nec diam eu diam mattis viverra.
+              Nulla fringilla.</p>
+          </div>
+        </div>
+        <hr>
+        <div class="row small-up-2 medium-up-3 large-up-4">
+
+          {{{body}}}
+
+        </div>
+        <hr>
+        <div class="row">
+          <div class="medium-6 columns">
+            <h3>Contact Me</h3>
+            <p>Vivamus hendrerit arcu sed erat molestie vehicula. Sed auctor neque eu tellus rhoncus ut eleifend nibh
+              porttitor. Ut in nulla enim. Phasellus molestie magna non est bibendum non venenatis nisl tempor.
+              Suspendisse dictum feugiat nisl ut dapibus. Mauris iaculis porttitor.</p>
+            <ul class="menu">
+              <li><a href="#">Dribbble</a></li>
+              <li><a href="#">Facebook</a></li>
+              <li><a href="#">Yo</a></li>
+            </ul>
+          </div>
+          <div class="medium-6 columns">
+            <label>Name
+              <input type="text" placeholder="Name">
+            </label>
+            <label>Email
+              <input type="text" placeholder="Email">
+            </label>
+            <label>
+              Message
+              <textarea placeholder="holla at a designerd"></textarea>
+            </label>
+            <input type="submit" class="button expanded" value="Submit">
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+  <script src="https://dhbhdrzi4tiry.cloudfront.net/cdn/sites/foundation.js"></script>
+  <script>
+    $(document).foundation();
+  </script>
 </body>
 
 </html>

@@ -1,11 +1,9 @@
-module.exports = function(sequelize, DataTypes) {
-  var Procedure = Sequelize.define("Procedure", {
+module.exports = function(sequelize, Sequelize) {
+  var Procedure = sequelize.define("Procedure", {
     procedureId: {
       type: Sequelize.INTEGER,
-      validate: {
-        primaryKey: true,
-        autoIncrement: true,
-      }
+      primaryKey: true,
+      autoIncrement: true
     },
     procedureName: {
       type: Sequelize.STRING,
@@ -41,6 +39,13 @@ module.exports = function(sequelize, DataTypes) {
         notEmpty: true,
         len: [1]
       }
+    },
+    createdAt: {
+      type: Sequelize.DATE
+    },
+    updatedAt: {
+      type: Sequelize.DATE
     }
   });
+  return Procedure;
 };

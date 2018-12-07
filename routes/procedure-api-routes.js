@@ -10,7 +10,7 @@ module.exports = function(app) {
   app.get("/api/procedure/:id", function(req, res) {
     db.Production.findOne({
       where: {
-        id: req.params.id
+        procedureId: req.params.id
       }
     }).then(function(dbProcedure) {
       res.json(dbProcedure);

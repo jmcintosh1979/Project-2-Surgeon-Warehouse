@@ -16,11 +16,10 @@
       <select id="selecProc">
         {{#each procedures}}
         <option value="">{{procedureName}}</option>
-
         {{/each}}
-
       </select>
     </label> 
+
     <label>Surgeons
       <select id="selecSurg">
        {{#each surgeons}}
@@ -29,7 +28,9 @@
         {{/each}}
       </select>
     </label>
-    <a href="#" class="button">Learn More</a> <a href="#features" class="button">View All Features</a>
+    <div class="input-group-button">
+    <input type="submit" class="button button expanded" value="Search">
+  </div>
     </div>
     <!-- end .timeline -->
   </div>

@@ -7,7 +7,7 @@ module.exports = function(app) {
         db.Procedure.findAll({}).then(function(Procedures){
           console.log(Surgeons);
           console.log(Procedures);
-            res.render('index', {surgeons: Surgeons.dataValues, procedures: Procedures.dataValues});
+            res.render('index', {surgeons: Surgeons, procedures: Procedures});
         });
     });
  

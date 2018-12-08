@@ -1,25 +1,41 @@
+
+<hr>
 <!-- row -->
 <div class="row">
-
-  <div class="large-6 columns">
-    <label>Procedures
+<div class="large-6 columns">
+  <div class="box bg-transparent">
+    <div class="box-header bg-transparent ">
+      
+      <h3 class="box-title"><i class="ti-search"></i>
+        <span>SEARCH</span>
+      </h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body bg-opacity-white " style="display: block;">
+       <label>Procedures
       <select id="selecProc">
-     {{#each procedures}}
+        {{#each procedures}}
         <option value="">{{procedureName}}</option>
 
-     {{/each}}
-       
+        {{/each}}
+
       </select>
-    </label>
+    </label> 
     <label>Surgeons
       <select id="selecSurg">
-        <option value="husker">Husker</option>
-        <option value="starbuck">Starbuck</option>
-        <option value="hotdog">Hot Dog</option>
-        <option value="apollo">Apollo</option>
+       {{#each surgeons}}
+        <option value="">{{surgeonName}}</option>
+
+        {{/each}}
       </select>
     </label>
+    <a href="#" class="button">Learn More</a> <a href="#features" class="button">View All Features</a>
+    </div>
+    <!-- end .timeline -->
   </div>
+  <!-- box -->
 </div>
-<hr>
+  
+</div>
+
 <!-- end row -->

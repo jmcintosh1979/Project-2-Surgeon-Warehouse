@@ -2,12 +2,12 @@
   line-height: 2.5;
 }
 
-.large-12{
+/* .large-12{
   background-color: #e6e6e6;
-}
+} */
 
 /* 
-    MAIN THEME 
+    Page: main theme 
 */
 .center_title {
   text-align: center;
@@ -1081,6 +1081,7 @@ ALERT
   background: #fac0c2;
   border: solid 1px #ef3236;
 }
+
 
 
 /*# sourceMappingURL=style.css.map */

@@ -69,14 +69,11 @@ module.exports = function(sequelize, Sequelize) {
     }
   });
 
-  
   Surgeons.associate = function(models) {
     Surgeons.hasMany(models.Procedures, {
       
     });
   };
-
-
 
   return Surgeons;
 };

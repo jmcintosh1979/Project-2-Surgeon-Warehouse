@@ -1,6 +1,7 @@
 var db = require("../models");
 
 module.exports = function(app) {
+
   // Get all
   app.get("/api/surgeons", function(req, res) {
     db.Surgeons.findAll({}).then(function(dbSurgeons) {
@@ -58,5 +59,4 @@ module.exports = function(app) {
       res.json(dbSurgeons);
     });
   });
-  
 };

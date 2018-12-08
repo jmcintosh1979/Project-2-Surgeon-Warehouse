@@ -7,35 +7,43 @@ module.exports = function(sequelize, Sequelize) {
     },
     surgicalItemDescription: {
       type: Sequelize.STRING,
-      //THIS MIGHT NOT WORK TEST IF THIS WORKS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      defaultValue: surgicalItemCatalogNumber,
-      //THIS MIGHT NOT WORK TEST IF THIS WORKS !!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!!
-      //if not look up uuid data types
       allowNull: false
     },
     surgicalItemCatalogNumber: {
       type: Sequelize.STRING,
-      allowNull: false
+      validate: {
+        allowNull: true
+      }
     },
     surgicalItemCategory: {
       type: Sequelize.STRING,
-      defaultValue: "Misc.",
-      allowNull: false
+      validate: {
+        allowNull: true
+      }
     },
     surgicalItemCost: {
-      type: Sequelize.DECIMAL[10.2],
-      defaultValue: 0.00,
-      allowNull: false
+      type: Sequelize.DECIMAL(10, 2),
+      validate: {
+        allowNull: true
+      }
     },
     surgicalItemCostPerUnit: {
-      type: Sequelize.DECIMAL[10.2],
-      defaultValue: 0.00,
-      allowNull: false
+      type: Sequelize.DECIMAL(10, 2),
+      validate: {
+        allowNull: true
+      }
     },
     surgicalItemUnitOfMeasure: {
-      type: Sequelize.INTEGER,
-      defaultValue: 1,
-      allowNull: false
+      type: Sequelize.STRING,
+      validate: {
+        allowNull: true
+      }
+    },
+    createdAt: {
+      type: Sequelize.DATE
+    },
+    updatedAt: {
+      type: Sequelize.DATE
     }
   });
   return Items;

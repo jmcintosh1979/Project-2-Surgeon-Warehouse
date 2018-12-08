@@ -22,7 +22,9 @@ app.engine(
 app.set("view engine", "handlebars");
 
 // Routes
-require("./routes/apiRoutes")(app);
+require("./routes/surgical-item-api-routes.js")(app);
+require("./routes/procedure-api-routes.js")(app);
+require("./routes/surgeons-api-routes")(app);
 require("./routes/htmlRoutes")(app);
 
 var syncOptions = { force: false };

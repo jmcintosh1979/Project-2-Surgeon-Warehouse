@@ -68,5 +68,12 @@ module.exports = function(sequelize, Sequelize) {
       type: Sequelize.DATE
     }
   });
+
+  Surgeons.associate = function(models) {
+    Surgeons.hasMany(models.Procedures, {
+      
+    });
+  };
+
   return Surgeons;
 };

@@ -1,35 +1,62 @@
 var db = require("../models");
 
 module.exports = function(app) {
+  // Get all
   app.get("/api/surgeons", function(req, res) {
     db.Surgeons.findAll({}).then(function(dbSurgeons) {
       res.json(dbSurgeons);
     });
   });
 
-  app.get("/api/surgeons/:id", function(req, res) {
-    db.Surgeons.findOne({
+  // Search by ID
+	app.get("/api/Surgeons/:surgeonId", function(req, res) {
+    db.Surgeons.findAll({
       where: {
-        surgeonId: req.params.id
+        surgeonId: req.params.surgeonId
       }
     }).then(function(dbSurgeons) {
       res.json(dbSurgeons);
     });
   });
+  
+  // Search by Type
+  app.get("/api/Surgeons/:surgeonType", function(req, res) {
+    db.Surgeons.findAll({
+      where: {
+			surgeonType: req.params.surgeonType
+      }
+    }).then(function(dbSurgeons) {
+      res.json(dbSurgeons);
+	 });
+  });
+  
+  // Search by Name
+  app.get("/api/Surgeons/:surgeonName", function(req, res) {
+	  db.Surgeons.findAll({
+	  where: {
+		surgeonName: req.params.surgeonName
+	  }
+	}).then(function(dbSurgeons) {
+	  res.json(dbSurgeons);
+	});
+ });
 
-  app.post("/api/surgeons", function(req, res) {
+  // Create a new example
+  app.post("/api/Surgeons", function(req, res) {
     db.Surgeons.create(req.body).then(function(dbSurgeons) {
       res.json(dbSurgeons);
     });
   });
 
-  app.delete("/api/surgeons/:id", function(req, res) {
+  // Delete an example by id
+  app.delete("/api/Surgeons/:surgeonId", function(req, res) {
     db.Surgeons.destroy({
       where: {
-        surgeonId: req.params.id
+        surgeonId: req.params.surgeonId
       }
     }).then(function(dbSurgeons) {
       res.json(dbSurgeons);
     });
   });
+  
 };

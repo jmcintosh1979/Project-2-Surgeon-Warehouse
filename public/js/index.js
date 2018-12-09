@@ -5,6 +5,17 @@ var $submitBtn = $("#submit");
 var $exampleList = $("#example-list");
 var $surgeonDropDown = $("#selecSurg");
 
+//ITEMS VAR
+var $submitItemBtn = $("#itemSubmit");
+
+
+// Add event listeners to the submit and delete buttons
+$submitBtn.on("click", handleFormSubmit);
+$exampleList.on("click", ".delete", handleDeleteBtnClick);
+
+//ITEMS EVENT LISTENERS
+$submitItemBtn.on("click", handleItemFormSubmit);
+
 // The API object contains methods for each kind of request we'll make
 var API = {
   saveExample: function(example) {
@@ -27,6 +38,12 @@ var API = {
     return $.ajax({
       url: "api/examples/" + id,
       type: "DELETE"
+    });
+  },
+  updateExample: function(id) {
+    return $.ajax({
+      url: "api/examples/" + id,
+      type: "UPDATE"
     });
   },
   getSurgeons: function() {
@@ -101,9 +118,7 @@ var handleDeleteBtnClick = function() {
   });
 };
 
-// Add event listeners to the submit and delete buttons
-$submitBtn.on("click", handleFormSubmit);
-$exampleList.on("click", ".delete", handleDeleteBtnClick);
+
 
 
 
@@ -114,5 +129,3 @@ function populateSurgeons(){
     console.log(result);
   });
 }
-
-

@@ -1,14 +1,14 @@
 {
   "development": {
     "username": "root",
-    "password": "root",
+    "password": "GrassIsGreener29!",
     "database": "surgwarehousedb",
     "host": "localhost",
     "dialect": "mysql"
   },
   "test": {
     "username": "root",
-    "password": "root", 
+    "password": "GrassIsGreener29!", 
     "database": "testsurgdb",
     "host": "localhost",
     "dialect": "mysql",

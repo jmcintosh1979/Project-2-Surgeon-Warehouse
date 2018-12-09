@@ -46,13 +46,5 @@ module.exports = function(sequelize, Sequelize) {
       type: Sequelize.DATE
     }
   });
-
-
-  Items.associate = function(models) {
-    Items.belongsTo(models.Procedures, {
-      foreignKey: {allowNull: false}
-    });
-  };
-
   return Items;
 };

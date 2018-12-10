@@ -17,7 +17,7 @@ module.exports = function (app) {
   app.get("/prefcard", function (req, res) {
     db.Surgeons.findAll({}).then(function (Surgeons) {
       db.Procedures.findAll({}).then(function (Procedures) {
-        db.Procedures.findAll({}).then(function (Items) {
+        db.Items.findAll({}).then(function (Items) {
           // console.log(Surgeons);
           // console.log(Procedures);
           res.render("prefcard", {

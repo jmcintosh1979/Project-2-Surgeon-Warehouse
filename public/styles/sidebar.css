@@ -3,7 +3,7 @@ Sidebar Menu
 */
 body {
    !important;
-  background: #2f323a;
+  background: #3c3c3c;
   padding: 0;
   font-size: 13px !important;
   color: #888 !important; }
@@ -68,7 +68,7 @@ body {
   width: 250px;
   left: 0;
   z-index: 1000;
-  background: #2f323a; }
+  background: #3c3c3c; }
   #skin-select #toggle {
     background: #000;
     color: white;

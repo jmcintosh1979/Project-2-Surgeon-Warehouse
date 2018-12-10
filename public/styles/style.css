@@ -12,6 +12,19 @@
 
 }
 
+body{
+  height: 100%;
+  margin: 0;
+}
+
+.bgimg {
+  /* The image used */
+  background-image: url("/img/backgroundTools.jpg");
+background-color: #0AA699;
+  /* Full height */
+  height: 100%;
+}
+
 /* 
     Page: main theme 
 */
@@ -20,9 +33,14 @@
   margin-left: 50px;
 }
 
-.title{
+.headerTitle{
   
   padding-left: 30px;
+  padding-top:15px;
+  /* margin: auto;
+  width: 50%;
+  padding: 10px;
+ */
 }
 
 /*

@@ -14,7 +14,7 @@ module.exports = function (app) {
 
   //PrefCard Page
   // Load Surgeons Preference page
-  app.get("/", function (req, res) {
+  app.get("/prefcard", function (req, res) {
     db.Surgeons.findAll({}).then(function (Surgeons) {
       db.Procedure.findAll({}).then(function (Procedures) {
         db.Procedure.findAll({}).then(function (Items) {
@@ -28,6 +28,14 @@ module.exports = function (app) {
   });
 
   // ADD //
+  // Load Add Items page
+  app.get("/addItems", function (req, res) {
+    db.Items.findAll({}).then(function (Items) {
+      // console.log(Items);
+      res.render("additem", { items: Items });
+    });
+  });
+
   // Load Add Procedure page
   app.get("/addProcedure", function (req, res) {
     db.Procedure.findAll({}).then(function (Procedure) {
@@ -43,15 +51,7 @@ module.exports = function (app) {
       res.render("addsurgeon", { surgeons: Surgeons });
     });
   });
-
-  // Load Add Items page
-  app.get("/addItems", function (req, res) {
-    db.Items.findAll({}).then(function (Items) {
-      // console.log(Items);
-      res.render("additem", { items: Items });
-    });
-  });
-
+  
   // LISTS //
   // Load Procedure List page
   app.get("/procedurelist", function (req, res) {

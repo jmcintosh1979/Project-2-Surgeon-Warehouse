@@ -16,12 +16,15 @@ module.exports = function (app) {
   // Load Surgeons Preference page
   app.get("/prefcard", function (req, res) {
     db.Surgeons.findAll({}).then(function (Surgeons) {
-      db.Procedure.findAll({}).then(function (Procedures) {
+      db.Procedures.findAll({}).then(function (Procedures) {
         db.Procedures.findAll({}).then(function (Items) {
           // console.log(Surgeons);
           // console.log(Procedures);
-          // console.log(Items);
-          res.render("prefcard", { surgeons: Surgeons, procedures: Procedures, items: Items });
+          res.render("prefcard", {
+            surgeons: Surgeons,
+            procedures: Procedures,
+            items: Items,
+          });
         });
       });
     });

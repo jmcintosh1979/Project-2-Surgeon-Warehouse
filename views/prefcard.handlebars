@@ -8,7 +8,7 @@
                 <!-- tools box -->
                 <div class="pull-right box-tools"> <span class="box-btn" data-widget="collapse"><i class="icon-minus"></i>
                     </span> </div>
-                <h3 class="box-title"><i class="ti-layout-accordion-separated"></i>
+                <h3 class="box-title"><i class="ti-user"></i>
                     <span>Surgeon's Information</span>
                 </h3>
             </div>
@@ -17,13 +17,11 @@
                 <!-- tooltip -->
                 <div class="row">
                     <div class="columns">
-                        <ul class="surgeons-group" id="surgeons-list">
                             {{#each surgeons}}
-                        <li data-id="{{surgeonName}}" class="list-group-item"><strong>Name:</strong> {{surgeonName}}</li>
-                        <li><strong>Specialty:</strong> {{surgeonSpecialty}} </li>
-                        <li><strong>Phone:</strong> {{surgeonPhone}} </li>
+                        <p data-id="{{surgeonName}}" class="list-group-item"><strong>Name:</strong> {{surgeonName}}</p>
+                        <p><strong>Specialty:</strong> {{surgeonSpecialty}} </p>
+                        <p><strong>Phone:</strong> {{surgeonPhone}} </p>
                          {{/each}}
-                        </ul>
                     </div>
                 </div>
                 <!-- end tooltip -->
@@ -40,7 +38,7 @@
                 <!-- tools box -->
                 <div class="pull-right box-tools"> <span class="box-btn" data-widget="collapse"><i class="icon-minus"></i>
                     </span> </div>
-                <h3 class="box-title"><i class="ti-layout-accordion-separated"></i>
+                <h3 class="box-title"><i class="ti-clipboard"></i>
                     <span>Procedure's Information</span>
                 </h3>
             </div>
@@ -50,6 +48,7 @@
                 <div class="row">
                     <div class="columns">
                         <div "large-12 columns">
+                            {{#each procedures}}
                             <p><strong>Procedure Name:</strong> handle bar</p>
                         </div>
                         <div class="small-12 medium-6 large-6 columns">
@@ -58,6 +57,7 @@
                         </div>
                         <div "large-12 columns">
                             <p><strong>Required Personnel:</strong> handle bar</p>
+                            {{/each}}
                         </div>
                     </div>
                 </div>
@@ -77,7 +77,7 @@
         <!-- tools box -->
         <div class="pull-right box-tools"> <span class="box-btn" data-widget="collapse"><i class="icon-minus"></i>
             </span> </div>
-        <h3 class="box-title"><i class="ti-view-list"></i>
+        <h3 class="box-title"><i class="ti-cut"></i>
             <span>Procedure's Items List</span>
         </h3>
     </div>

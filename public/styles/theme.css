@@ -7,9 +7,9 @@ Version:    1.0
 Last change:    01/01/2017 [fixed Float bug, vf]
 Author:Themesmile
 -------------------------------------------------------------------*/
-@import url(http://weloveiconfonts.com/api/?family=entypo);
-@import url(http://weloveiconfonts.com/api/?family=fontawesome);
-@import url(http://fonts.googleapis.com/css?family=Montserrat:400,700);
+@import url('http://weloveiconfonts.com/api/?family=entypo');
+@import url('http://weloveiconfonts.com/api/?family=fontawesome');
+@import url('https://fonts.googleapis.com/css?family=Montserrat:400,700');
 [class*="entypo-"]:before {
   font-family: "entypo", sans-serif; }
 
@@ -19,10 +19,13 @@ Author:Themesmile
 
 body {
    !important;
-  background: #2f323a;
+  background: #3c3c3c;
   padding: 0;
   font-size: 13px !important;
-  color: #888 !important; }
+  color: #888 !important; 
+
+}
+
 
 h1, h2, h3, h4, h5, h6 {
   font-family: "Montserrat", sans-serif !important;
@@ -52,7 +55,7 @@ Preloader
   left: 0;
   right: 0;
   bottom: 0;
-  background-color: #2F323A;
+  background-color: #3c3c3c;
   /* change if the mask should have another color then white */
   z-index: 9999;
   /* makes sure it stays on top */ }
@@ -973,7 +976,7 @@ Sidebar Menu
 */
 body {
    !important;
-  background: #2f323a;
+  background: #3c3c3c;
   padding: 0;
   font-size: 13px !important;
   color: #888 !important; }
@@ -1038,7 +1041,7 @@ body {
   width: 250px;
   left: 0;
   z-index: 1000;
-  background: #2f323a; }
+  background: #3c3c3c; }
   #skin-select #toggle {
     background: #000;
     color: white;

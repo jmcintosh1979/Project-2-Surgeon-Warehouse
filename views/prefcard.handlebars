@@ -1,1 +1,115 @@
-<h2>PrefCard</h2>
+<div class="row">
+    <div class="large-4 columns">
+        <!--SURGEONS ACCORDION -->
+        <div class="box no-shadow ">
+            <div class="box-header bg-transparent">
+                <!-- tools box -->
+                <div class="pull-right box-tools"> <span class="box-btn" data-widget="collapse"><i class="icon-minus"></i>
+                    </span> </div>
+                <h3 class="box-title"><i class="ti-layout-accordion-separated"></i>
+                    <span>Surgeon's Information</span>
+                </h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <!-- tooltip -->
+                <div class="row">
+                    <div class="columns">
+                        <ul class="surgeons-group" id="surgeons-list">
+                            {{#each Surgeons}}
+                        <li data-id="{{this.surgeonName}}" class="list-group-item"><strong>Name:</strong></li>
+                        <li><strong>Specialty:</strong> {{Surgeons.surgeonSpecialty}} </li>
+                        <li><strong>Phone:</strong> {{Surgeons.surgeonPhone}} </li>
+                        </ul>
+                    </div>
+                </div>
+                <!-- end tooltip -->
+            </div>
+            <!-- /.box-body -->
+        </div>
+    </div>
+    <!--end of SURGEONS ACCORDION-->
+
+    <div class="large-8 columns">
+        <!--PROCEDURE ACCORDION -->
+        <div class="box no-shadow ">
+            <div class="box-header bg-transparent">
+                <!-- tools box -->
+                <div class="pull-right box-tools"> <span class="box-btn" data-widget="collapse"><i class="icon-minus"></i>
+                    </span> </div>
+                <h3 class="box-title"><i class="ti-layout-accordion-separated"></i>
+                    <span>Procedure's Information</span>
+                </h3>
+            </div>
+            <!-- /.box-header -->
+            <div class="box-body">
+                <!-- tooltip -->
+                <div class="row">
+                    <div class="columns">
+                        <div "large-12 columns">
+                            <p><strong>Procedure Name:</strong> handle bar</p>
+                        </div>
+                        <div class="small-12 medium-6 large-6 columns">
+                            <p><strong>Procedure Time:</strong> handle bar</p>
+                            <p><strong>Position:</strong> handle bar</p>
+                        </div>
+                        <div "large-12 columns">
+                            <p><strong>Required Personnel:</strong> handle bar</p>
+                        </div>
+                    </div>
+                </div>
+                <!-- end tooltip -->
+            </div>
+            <!-- /.box-body -->
+        </div>
+    </div>
+</div>
+<!--end of PROCEDURE ACCORDION-->
+
+<!--ITEM TABLE-->
+
+
+<div class="box no-shadow ">
+    <div class="box-header bg-transparent">
+        <!-- tools box -->
+        <div class="pull-right box-tools"> <span class="box-btn" data-widget="collapse"><i class="icon-minus"></i>
+            </span> </div>
+        <h3 class="box-title"><i class="ti-view-list"></i>
+            <span>Procedure's Items List</span>
+        </h3>
+    </div>
+    <!-- /.box-header -->
+    <div class="box-body">
+        <!-- modal -->
+        <div class="row">
+
+            <table class="stack">
+                <thead>
+                    <tr>
+                        <th>Item Name</th>
+                        <th>Catalog</th>
+                        <th>Category</th>
+                        <th>CPU</th>
+
+                    </tr>
+                </thead>
+                <tbody>
+                    {{#Items}} 
+                    <tr>
+                        <td>{{itemName}} </td>
+                        <td>{{itemCatalog}}</td>
+                        <td>{{itemCategory}}</td>
+                        <td>{{itemCpu}}</td>
+                    </tr>
+                    {{/Items}} 
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <!-- end Modal -->
+</div>
+<!-- /.box-body -->
+<!-- end of ITEM TABLE-->
+
+  <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+  <script src="/js/prefcard.js"></script>

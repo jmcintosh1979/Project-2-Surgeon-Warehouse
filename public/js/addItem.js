@@ -4,10 +4,10 @@ $(function() {
     console.log("I've been clicked");
 
     newItem = {
-      itemName: $("#SurgicalItemDescription").val().trim(),
-      itemCatalog: $("#SurgicalItemCatalogNumber").val().trim(),
-      itemCategory: $("#SurgicalItemCategory").val().trim(),
-      itemCpu: $("#SurgicalItemCostPerUnit").val().trim()
+      itemName: $("#itemName").val().trim(),
+      itemCatalog: $("#itemCatalog").val().trim(),
+      itemCategory: $("#itemCategory").val().trim(),
+      itemCpu: $("#itemCpu").val().trim()
     };
     $.ajax("/api/items", {
       type: "POST",

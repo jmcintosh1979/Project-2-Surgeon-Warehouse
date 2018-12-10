@@ -15,37 +15,26 @@
             <div class="row">
               <div class="input-group">
                 <div class="medium-6 columns">
-                  <label>Surgical Item Name
-                    <input type="text" id="SurgicalItemDescription" aria-describedby="SurgicalItemDescription"
-                      placeholder="Add Item's Name">
+                  <label>Item Name
+                    <input type="text" id="itemName" aria-describedby="SurgicalItemDescription"
+                      placeholder="Add Item Name">
                   </label>
                 </div>
                 <div class="medium-6 columns">
-                  <label>Surgical Item Catalog Number
-                    <input type="number" id="SurgicalItemCatalogNumber" aria-describedby="SurgicalItemCatalogNumber"
-                      placeholder="Add Item's Catalog Number">
+                  <label>Catalog Number
+                    <input type="text" id="itemCatalog" aria-describedby="SurgicalItemCatalogNumber"
+                      placeholder="Add Catalog Number">
                   </label>
                 </div>
                 <div class="medium-6 columns">
-                  <label>Surgical Item Category
-                    <input type="text" id="SurgicalItemCategory" aria-describedby="SurgicalItemCategory" placeholder="Add Item's Category">
+                  <label>Category
+                    <input type="text" id="itemCategory" aria-describedby="SurgicalItemCategory" placeholder="Add Category">
                   </label>
                 </div>
                 <div class="medium-6 columns">
-                  <label>Surgical Item Cost
-                    <input type="number" id="SurgicalItemCost" aria-describedby="SurgicalItemCost" placeholder="Add Item's Cost">
-                  </label>
-                </div>
-                <div class="medium-6 columns">
-                  <label>Surgical Item Cost Per Unit
-                    <input type="number" id="SurgicalItemCostPerUnit" aria-describedby="SurgicalItemCostPerUnit"
-                      placeholder="Add Item's Cost Per unit">
-                  </label>
-                </div>
-                <div class="medium-6 columns">
-                  <label>SurgicalItemUnitOfMeasure
-                    <input type="text" id="SurgicalItemUnitOfMeasure" aria-describedby="SurgicalItemUnitOfMeasure"
-                      placeholder="Add Item's Unit of Measure">
+                  <label>Cost Per Unit`
+                    <input type="number" id="itemCpu" aria-describedby="SurgicalItemCostPerUnit"
+                      placeholder="Add Cost Per Unit">
                   </label>
                   <div class="input-group-button"></div>
                   <input type="submit" id="itemSubmit" class="button button expanded" value="Submit">
@@ -56,23 +45,6 @@
         </div>
         <hr>
         <!-- end row -->
-
-
-        <!-- SAMPLE FORM -->
-        <form class="clearfix mb-4" action="POST">
-          <div class="form-group">
-            <label for="example-text">Example Text</label>
-            <input type="text" id="SurgicalItemDescription" class="form-control" aria-describedby="example-text"
-              placeholder="Enter Example Text">
-          </div>
-          <div class="form-group">
-            <label for="example-description">Example Description</label>
-            <textarea class="form-control" id="SurgicalItemCatalogNumber" aria-describedby="example-description"
-              placeholder="Enter Example Description"></textarea>
-          </div>
-          <button id="itemSubmit" class="btn btn-primary float-right">Submit</button>
-        </form>
-
 
         <!-- To ADD ITEM -->
         <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>

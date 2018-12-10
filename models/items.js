@@ -31,13 +31,13 @@ module.exports = function(sequelize, Sequelize) {
     }
   });
 
-  Items.associate = function(models) {
-    Items.belongsTo(models.Procedures, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
+  // Items.associate = function(models) {
+  //   Items.belongsTo(models.Procedures, {
+  //     foreignKey: {
+  //       allowNull: true
+  //     }
+  //   });
+  // };
   
   return Items;
 };

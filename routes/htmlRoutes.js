@@ -4,7 +4,7 @@ module.exports = function (app) {
   // Load index page
   app.get("/", function (req, res) {
     db.Surgeons.findAll({}).then(function (Surgeons) {
-      db.Procedure.findAll({}).then(function (Procedures) {
+      db.Procedures.findAll({}).then(function (Procedures) {
         // console.log(Surgeons);
         // console.log(Procedures);
         res.render("index", { surgeons: Surgeons, procedures: Procedures });
@@ -17,7 +17,7 @@ module.exports = function (app) {
   app.get("/prefcard", function (req, res) {
     db.Surgeons.findAll({}).then(function (Surgeons) {
       db.Procedure.findAll({}).then(function (Procedures) {
-        db.Procedure.findAll({}).then(function (Items) {
+        db.Procedures.findAll({}).then(function (Items) {
           // console.log(Surgeons);
           // console.log(Procedures);
           // console.log(Items);
@@ -38,7 +38,7 @@ module.exports = function (app) {
 
   // Load Add Procedure page
   app.get("/addProcedure", function (req, res) {
-    db.Procedure.findAll({}).then(function (Procedure) {
+    db.Procedures.findAll({}).then(function (Procedure) {
       // console.log(Procedure);
       res.render("addprocedure", { procedure: Procedure });
     });
@@ -55,7 +55,7 @@ module.exports = function (app) {
   // LISTS //
   // Load Procedure List page
   app.get("/procedurelist", function (req, res) {
-    db.Procedure.findAll({}).then(function (Procedure) {
+    db.Procedures.findAll({}).then(function (Procedure) {
       // console.log(Procedure);
       res.render("procedurelist", { procedure: Procedure });
     });
@@ -74,16 +74,6 @@ module.exports = function (app) {
     db.Items.findAll({}).then(function (Items) {
       // console.log(Items);
       res.render("itemslist", { items: Items });
-    });
-  });
-
-  // EXAMPLE //
-  // Load example page and pass in an example by id
-  app.get("/example/:id", function (req, res) {
-    db.Example.findOne({ where: { id: req.params.id } }).then(function (dbExample) {
-      res.render("example", {
-        example: dbExample
-      });
     });
   });
 

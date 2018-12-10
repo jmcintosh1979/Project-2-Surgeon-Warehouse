@@ -50,14 +50,14 @@ module.exports = function(sequelize, Sequelize) {
     }
   });
 
-  Procedures.associate = function(models) {
-    Procedures.hasMany(models.Items);
-    Procedures.belongsTo(models.Surgeons, {
-      foreignKey: {
-        allowNull: false
-      }
-    });
-  };
+  // Procedures.associate = function(models) {
+  //   Procedures.hasMany(models.Items);
+  //   Procedures.belongsTo(models.Surgeons, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // };
   
-  return Procedure;
+  return Procedures;
 };

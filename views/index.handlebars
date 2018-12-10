@@ -14,6 +14,7 @@
     <div class="box-body bg-opacity-white " style="display: block;">
        <label>Procedures
       <select id="selecProc">
+        <option value="" selected disabled hidden>Choose Procedure</option>
         {{#each procedures}}
         <option value="">{{procedureName}}</option>
         {{/each}}
@@ -22,6 +23,7 @@
 
     <label>Surgeons
       <select id="selecSurg">
+        <option value="" selected disabled hidden>Choose Surgeon</option>
        {{#each surgeons}}
         <option value="">{{surgeonName}}</option>
 
@@ -29,7 +31,7 @@
       </select>
     </label>
     <div class="input-group-button">
-    <input type="submit" class="button button expanded" value="Search">
+    <input type="submit" class="button button expanded" value="Create Preference Card">
   </div>
     </div>
     <!-- end .timeline -->

@@ -2,13 +2,13 @@ var db = require("../models");
 
 module.exports = function(app) {
   app.get("/api/procedure", function(req, res) {
-    db.Procedure.findAll({}).then(function(dbProcedure) {
+    db.Procedures.findAll({}).then(function(dbProcedure) {
       res.json(dbProcedure);
     });
   });
 
   app.get("/api/procedure/:id", function(req, res) {
-    db.Production.findOne({
+    db.Procedures.findOne({
       where: {
         procedureId: req.params.id
       }
@@ -18,13 +18,13 @@ module.exports = function(app) {
   });
 
   app.post("/api/procedure", function(req, res) {
-    db.Procedure.create(req.body).then(function(dbProcedure) {
+    db.Procedures.create(req.body).then(function(dbProcedure) {
       res.json(dbProcedure);
     });
   });
 
   app.delete("/api/procedure/:id", function(req, res) {
-    db.Procedure.destroy({
+    db.Procedures.destroy({
       where: {
         procedureId: req.params.id
       }

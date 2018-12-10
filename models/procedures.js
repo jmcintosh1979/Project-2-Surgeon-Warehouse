@@ -1,5 +1,5 @@
 module.exports = function(sequelize, Sequelize) {
-  var Procedure = sequelize.define("Procedure", {
+  var Procedures = sequelize.define("Procedures", {
     procedureId: {
       type: Sequelize.INTEGER,
       primaryKey: true,
@@ -7,45 +7,57 @@ module.exports = function(sequelize, Sequelize) {
     },
     procedureName: {
       type: Sequelize.STRING,
+      notNull: true,
       validate: {
-        notEmpty: true,
         len: [1]
       }
     },
     procedureTime: {
       type: Sequelize.INTEGER,
+      notNull: true,
       validate: {
-        notNull: true,
         len: [1]
       }
     },
     procedureCptId: {
       type: Sequelize.INTEGER,
+      notNull: true,
       validate: {
-        notNull: true,
         len: [1]
       }
     },
     procedurePosition: {
       type: Sequelize.TEXT,
+      notNull: true,
       validate: {
-        notEmpty: true,
         len: [1]
       }
     },
     procedureRequiredPersonnel: {
       type: Sequelize.TEXT,
+      notNull: true,
       validate: {
-        notEmpty: true,
         len: [1]
       }
     },
     createdAt: {
-      type: Sequelize.DATE
+      type: Sequelize.DATE,
+      defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
     },
     updatedAt: {
-      type: Sequelize.DATE
+      type: Sequelize.DATE,
+      defaultValue: sequelize.literal("CURRENT_TIMESTAMP")
     }
   });
-  return Procedure;
+
+  // Procedures.associate = function(models) {
+  //   Procedures.hasMany(models.Items);
+  //   Procedures.belongsTo(models.Surgeons, {
+  //     foreignKey: {
+  //       allowNull: false
+  //     }
+  //   });
+  // };
+  
+  return Procedures;
 };
